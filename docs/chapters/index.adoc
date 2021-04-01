@@ -1,9 +1,11 @@
 = API Security
 :page-pagination: next
+:page-toclevels: -1
 
 [.lead]
 A guide to building and securing APIs from the developer team at Okta
 
+[.table-of-contents]
 == Table of Contents
 
 * xref:acknowledgments.adoc[]
