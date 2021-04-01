@@ -1,0 +1,11 @@
+= How to Mitigate DoS Attacks
+
+Now that you know what DoS attacks are and why attackers perform them,
+let's discuss how you can protect yourself and your services.
+Most common mitigation techniques work by detecting illegitimate traffic and blocking it at the routing level,
+managing and analyzing the bandwidth of the services, and being mindful when architecting your APIs,
+so they're able to handle large amounts of traffic.
+
+== Attack Detection
+
+The first step of any mitigation strategy is understanding when you are the target of a DoS attack.

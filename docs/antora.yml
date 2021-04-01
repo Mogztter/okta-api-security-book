@@ -1,0 +1,11 @@
+name: ROOT
+title: API Security
+version: master
+nav:
+  - nav.adoc
+asciidoc:
+  attributes:
+    page-pagination: '@'
+    sourcedir: 'example$'
+    book-title: Okta API Security Book
+    keywords: Okta, API, Security

@@ -1,0 +1,12 @@
+= Types of Denial of Service Attacks
+
+There are three main types of DoS attacks:
+
+== 1. Application-layer Flood
+
+In this attack type, an attacker simply floods the service with requests from a spoofed IP address in an attempt to slow or crash the service, illustrated in .
+This could take the form of millions of requests per second or a few thousand requests to a particularly resource-intensive service that eat up resources until the service is unable to continue processing the requests.
+
+image::https://developer.okta.com/img/books/api-security/dos/images/attack.png["An attacker floods the service from a single IP address"]
+
+Preventing application-layer DoS attacks can be tricky. The best way to help mitigate these types of attacks is to outsource pattern detection and IP filtering to a third party (discussed later).

@@ -1,0 +1,21 @@
+{
+  "name": "@okta/api-security-book",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "antora --generator=mini-book-site-generator --html-url-extension-style=indexify site.yml"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@antora/cli": "^2.3.4",
+    "browser-sync": "^2.26.14",
+    "chokidar": "^3.5.1",
+    "mini-book-site-generator": "git+https://github.com/Mogztter/mini-book-site-generator.git"
+  }
+}

@@ -1,0 +1,41 @@
+= Sanitizing Data
+Brian Demers
+
+By Brian Demers
+
+The inputs to your application represent the most significant surface area of attack for any application.
+Does your API power forms for user input? Do you display data that didn't originate in your API? Do users upload files through your API?
+
+Any time data crosses a trust boundary - the boundary between any two systems - it should be validated and handled with care.
+For example, a trust boundary would be any input from an HTTP request, data returned from a database, or calls to remote APIs.
+
+Let's start with a simple example: a user submission to the popular internet forum, Reddit.
+A user could try to include a malicious string in a comment such as:
+
+[source,html]
+<img src onerror='alert("haxor")'>
+
+If this were rendered as is, in an HTML page, it would pop up an annoying message to the user.
+However, to get around this, when Reddit displays the text to the user, it is escaped:
+
+[source,html]
+&lt;img src onerror=&#39;alert(&quot;haxor&quot;)&#39;&gt;
+
+which will make the comment appear as visible text instead of HTML, as shown in .
+
+image::https://developer.okta.com/img/books/api-security/sanitizing/images/reddit.png["Reddit properly escapes user input"]
+
+In this example the trust boundary is obvious as any user input should not be trusted.
+
+There are a few different approaches you can use when validating input:
+
+* Accept known good
+* Reject bad
+* Sanitize
+* Do nothing
+* https://developer.okta.com/books/api-security/sanitizing/accept-good[Accept Known Good]
+* https://developer.okta.com/books/api-security/sanitizing/reject-bad[Reject Bad Inputs]
+* https://developer.okta.com/books/api-security/sanitizing/sanitize-inputs[Sanitize Inputs]
+* https://developer.okta.com/books/api-security/sanitizing/common-attacks[Common Attacks]
+* https://developer.okta.com/books/api-security/sanitizing/attack-vectors[Look For Other Attack Vectors]
+* https://developer.okta.com/books/api-security/sanitizing/best-practices[Best Practices for Secure Data]
